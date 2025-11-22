@@ -1,20 +1,14 @@
-import {Geist, Geist_Mono} from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import {cn} from "@/lib/cn";
+import {geistMono, geistSans} from "@/lib/fonts";
 
 export default function RootLayout({children}: LayoutProps<"/">) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={cn("antialiased", [
+          geistMono.className,
+          geistSans.className,
+        ])}>
         {children}
       </body>
     </html>
