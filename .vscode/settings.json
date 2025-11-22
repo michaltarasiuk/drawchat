@@ -1,0 +1,4 @@
+{
+  "tailwindCSS.classFunctions": ["cva", "cx", "extendTailwindMerge"],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

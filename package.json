@@ -1,12 +1,16 @@
 {
-  "name": "chat-draw",
-  "version": "0.1.0",
-  "private": true,
+  "type": "module",
   "scripts": {
+    "prepare": "husky",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "prettier-check": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "type-check": "next typegen && tsc --noEmit --incremental false",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix .",
+    "ci": "bun run prettier-check && bun run type-check && bun run lint && bun run build"
   },
   "dependencies": {
     "next": "16.0.3",
@@ -20,6 +24,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
