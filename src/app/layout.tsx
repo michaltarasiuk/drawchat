@@ -1,3 +1,5 @@
+import "./globals.css";
+
 import {cn} from "@/lib/cn";
 import {geistMono, geistSans} from "@/lib/fonts";
 
