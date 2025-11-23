@@ -65,6 +65,7 @@ function Form({status, action}: FormProps) {
         type="text"
         placeholder="Type your message..."
         disabled={disabled}
+        autoFocus
         required
         className={cn("input input-bordered flex-1")}
       />
