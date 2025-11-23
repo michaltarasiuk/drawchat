@@ -5,7 +5,7 @@ import {geistMono, geistSans} from "@/lib/fonts";
 
 export default function RootLayout({children}: LayoutProps<"/">) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("scroll-smooth")}>
       <body
         className={cn("antialiased", [
           geistMono.className,

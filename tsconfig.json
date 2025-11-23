@@ -14,14 +14,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "plugins": [{"name": "next"}],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "noEmit": true,
     "jsx": "react-jsx",
     "allowJs": true,
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "incremental": true,
     "skipLibCheck": true
   },
@@ -32,5 +42,7 @@
     "**/*.tsx",
     "next-env.d.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

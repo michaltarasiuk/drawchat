@@ -1,3 +1,5 @@
+import {Chat} from "@/components/Chat";
+
 export default function RootPage() {
-  return <button className="btn">Button</button>;
+  return <Chat />;
 }
