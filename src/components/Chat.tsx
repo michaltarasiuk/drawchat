@@ -2,6 +2,7 @@
 
 import {useChat} from "@ai-sdk/react";
 import {type ChatStatus, DefaultChatTransport, type UIMessage} from "ai";
+import {useRef} from "react";
 
 import {cn} from "@/lib/cn";
 
@@ -12,7 +13,7 @@ export function Chat() {
     }),
   });
   return (
-    <div className={cn("flex h-dvh flex-col")}>
+    <div className={cn("flex h-full flex-col")}>
       <Messages messages={messages} />
       <Form
         status={status}
@@ -57,6 +58,7 @@ interface FormProps {
 }
 
 function Form({status, action}: FormProps) {
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const disabled = status !== "ready";
   return (
     <form className={cn("flex gap-2 p-4")} action={action}>
@@ -70,6 +72,7 @@ function Form({status, action}: FormProps) {
         className={cn("input input-bordered flex-1")}
       />
       <button
+        ref={buttonRef}
         type="submit"
         disabled={disabled}
         className={cn("btn btn-primary")}>
