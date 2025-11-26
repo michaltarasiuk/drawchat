@@ -20,7 +20,8 @@ export default function RootPage() {
       <div className={cn("flex-2")}>
         <Excalidraw />
       </div>
-      <div className={cn("hidden", "lg:flex-1 xl:block")}>
+      <div className={cn("divider divider-horizontal hidden", "xl:flex")} />
+      <div className={cn("hidden", "xl:block xl:flex-1")}>
         <Chat />
       </div>
     </div>
