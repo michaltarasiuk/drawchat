@@ -13,7 +13,9 @@ export function Chat() {
       api: "/api/chat",
     }),
     onFinish() {
-      formRef.current?.focusInput();
+      requestAnimationFrame(() => {
+        formRef.current?.focusInput();
+      });
     },
   });
   return (
@@ -67,9 +69,7 @@ function Form({ref, status, action}: FormProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => ({
     focusInput: () => {
-      requestAnimationFrame(() => {
-        inputRef.current?.focus();
-      });
+      inputRef.current?.focus();
     },
   }));
   const disabled = status !== "ready";
