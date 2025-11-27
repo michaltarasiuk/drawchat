@@ -79,6 +79,7 @@ function Form({ref, status, action}: FormProps) {
         ref={inputRef}
         name="text"
         type="text"
+        autoComplete="off"
         placeholder="Type your message..."
         disabled={disabled}
         autoFocus
